@@ -15,6 +15,7 @@ void setup()
   sendData("AT+CWMODE=3\r\n",1000,DEBUG); // configure as access point 
   sendData("AT+RST\r\n",2000,DEBUG); // reset module
   sendData("AT+CWJAP=\"Makerfabs\",\"20160704\"\r\n",5000,DEBUG);
+  delay(1000);
   sendData("AT+CIFSR\r\n",1000,DEBUG);// get ip address
   sendData("AT+CIPMUX=1\r\n",1000,DEBUG); // configure for multiple connections
   sendData("AT+CIPSERVER=1,80\r\n",1000,DEBUG); // turn on server on port 80
